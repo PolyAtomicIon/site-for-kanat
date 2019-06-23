@@ -1,22 +1,80 @@
-<html>
-    <head>
-        <title>Django Girls blog</title>
-    </head>
-    <body>
-        <div>
-            <h1><a href="/">Django Girls Blog</a></h1>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        body {
+            height: 700px;
+            display: flex;
+            align-items: center;
+            background: rgb(77, 81, 94);
+            font-family: 'Arial';
+        }
+
+        .wrapper {
+            width: 736px;
+            height: 529px;
+            margin: 0 auto;
+            border-radius: 10px;
+            box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+        }
+
+        .left {
+            display: inline-block;
+        }
+
+        .left {
+            position: relative;
+            left: 0px;
+            height: 529px;
+            width: 736px;
+            border-radius: 10px 10px 10px 10px;
+            background: red;
+            color: white;
+            text-align: center;
+            display: flex;
+            align-items: center;
+        }
+
+        .left .main {
+            width: 500px;
+            margin: auto;
+            background: black;
+            transition: .7s ease;
+            border-radius: 10px 10px 10px 10px;
+        }
+
+        .left .main:hover {
+            color: green;
+            background: white;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="wrapper">
+
+        <div class="left">
+
+            <div class="main">
+
+                <h1>МАФИЯ</h1>
+
+            </div>
+
         </div>
 
-        <div>
-            <p>published: 14.06.2014, 12:14</p>
-            <h2><a href="">My first post</a></h2>
-            <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-        </div>
 
-        <div>
-            <p>published: 14.06.2014, 12:14</p>
-            <h2><a href="">My second post</a></h2>
-            <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut f.</p>
-        </div>
-    </body>
+
+    </div>
+
+</body>
+
 </html>
