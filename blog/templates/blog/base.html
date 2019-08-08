@@ -3,38 +3,48 @@
 
 <head>
     <title>Django Girls blog</title>
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="{% static 'css/blog.css' %}">
 </head>
 
 <body>
-    <nav class="navbar navbar-default" role="navigation">
-        <div class="container-fluid">
-            <!-- Brand and toggle get grouped for better mobile display -->
+    
+    <div class="jumbotron text-center" style="background-image: url('{% static 'img/header.jpg'%}')";>
+        <div class="container">
+            <h1 class="text-center">С теплом в каждый дом</h1>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-default">
+        <div class="container navigation">
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>                        
                 </button>
-                <a class="navbar-brand" href="#">Brand Logo</a>
+                <a class="navbar-brand" href="#"> 
+                    <img src="{% static 'img/logo.png' %}" alt = "petrhleb">
+                </a>
             </div>
-        
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li><a href="#">Главная</a></li>
-                    <li><a href="#">О Компании</a></li>
-                    <li><a href="#">Продукция</a></li>
-                    <li><a href="#">Галерея</a></li>
-                    <li><a href="#">Контакты</a></li>
-                    <li class="social pull-right"><a href="#">Social Links</a></li>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#about"><center>О Компании</center></a></li>
+                    <li><a href="#services"><center>Новости</center></a></li>
+                    <li><a href="#portfolio"><center>Продукция</center></a></li>
+                    <li><a href="#pricing"><center>Контакты</center></a></li>
+                    <li><a href="https://www.instagram.com/hlebkamchatka"><center><i class="fa fa-instagram w3-hover-opacity"></i></center></a></li>
                 </ul>
-            </div><!-- /.navbar-collapse -->
-        </div><!-- /.container-fluid -->
+            </div>
+        </div>
     </nav>
+      
     <div class="page-header">
         {% if user.is_authenticated %}
             <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
