@@ -44,3 +44,6 @@ def post_edit(request, pk):
 class HomePageView(ListView):
     model = Post
     template_name = 'home.html'
+
+def products(request):
+    return render(request, 'blog/products.html')
