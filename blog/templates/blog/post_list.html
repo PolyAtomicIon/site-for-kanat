@@ -1,13 +1,99 @@
 {% extends 'blog/base.html' %}
 
 {% block content %}
-    {% for post in posts %}
-        <div class="post">
-            <div class="date">
-                {{ post.published_date }}
-            </div>
-            <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
-            <p>{{ post.text|linebreaksbr }}</p>
+    
+<div class="container caroousel-container " id="news">
+    <div class="row">
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner">
+                <div class="item active">
+                    <img style="width: 100%;" src="{{ posts.0.cover.url}}" alt="{{ posts.0.title }}">
+                    <div class="carousel-caption">
+                        <div class="date">{{ posts.0.published_date }}</div>
+                        <h1><a href="{% url 'post_detail' pk=posts.0.pk %}">{{ posts.0.title }}</a></h1>
+                        <p>{{ posts.0.text|linebreaksbr }}</p>
+                    </div>
+                </div>
+                {% for post in posts %}
+                {% if post.title != posts.0.title %}
+                <div class="item">
+                    <img style="width: 100%;" src="{{ post.cover.url}}" alt="{{ post.title }}">
+                    <div class="carousel-caption">
+                        <div class="date">{{ post.published_date }}</div>
+                        <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
+                        <p>{{ post.text|linebreaksbr }}</p>
+                    </div>
+                </div>
+                {% endif %}
+                {% endfor %}
+            </div><!-- End Carousel Inner -->
+    
+        </div><!-- End Carousel -->
         </div>
-    {% endfor %}
+    </div>
+
+                
+    <div id="contacts" class="container-fluid w3-light-grey text-center">
+
+        <h2 class="text-center w3-padding-32">К О Н Т А К Т Ы</h2>
+        <div class="row">
+            
+            <div class="col-sm-12 col-xs-12 col-md-4 col-lg-12">
+                <p> <b> Начальник отдела сбыта </b> <br> Махметов Е. У. 8 (707) 798 80 00 </p>
+                <p> <b> Руководитель хлебо-булочного направления </b> <br> Кучумова А. 8 (747) 039 06 83 </p>
+                <p> <b> Руководитель кондитерского направления </b> <br> Сейтова А. А. 8 (777) 897 16 20 </p>
+                <p> <b> Приёмная ТОО ПХБК </b> <br>Адрес: Северо-Казахстанская область, г. Петропавловск
+                        Телефон: 465080
+                        Fax: 465080 </p>
+            </div>
+                        
+        
+        </div>
+        
+        
+        <footer class="w3-container w3-light-grey w3-center w3-xlarge">
+        <div class="w3-section">
+            <a style="display: inline-block; padding-right: 3px" target="_blank" href="https://www.instagram.com/ac_oskemen/"><i class="fa fa-instagram w3-hover-opacity"></i></a>
+        </div>
+        <p class="w3-medium">@2017 Powered by <a href="https://www.instagram.com/erbkz/" target="_blank" class="w3-hover-text-green"> Bekzat </a></p>
+        </footer>
+            
+            
+    </div>
+    
+
+<script>
+        $(document).ready(function(){
+
+            var clickEvent = false;
+            $('#myCarousel').carousel({
+                interval:   1750
+            }).on('click', '.list-group li', function() {
+                    clickEvent = true;
+                    $('.list-group li').removeClass('active');
+                    $(this).addClass('active');		
+            }).on('slid.bs.carousel', function(e) {
+                if(!clickEvent) {
+                    var count = $('.list-group').children().length -1;
+                    var current = $('.list-group li.active');
+                    current.removeClass('active').next().addClass('active');
+                    var id = parseInt(current.data('slide-to'));
+                    if(count == id) {
+                        $('.list-group li').first().addClass('active');	
+                    }
+                }
+                clickEvent = false;
+            });
+        })
+
+        $(window).load(function() {
+            var boxheight = $('#myCarousel .carousel-inner').innerHeight();
+            var itemlength = $('#myCarousel .item').length;
+            var triggerheight = Math.round(boxheight/itemlength+1);
+            $('#myCarousel .list-group-item').outerHeight(triggerheight);
+        });
+    </script>
+
 {% endblock %}

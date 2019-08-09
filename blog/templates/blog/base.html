@@ -36,29 +36,30 @@
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="#about"><center>О Компании</center></a></li>
-                    <li><a href="#services"><center>Новости</center></a></li>
-                    <li><a href="#portfolio"><center>Продукция</center></a></li>
-                    <li><a href="#pricing"><center>Контакты</center></a></li>
+                    <li><a href="#news"><center>Новости</center></a></li>
+                    <li><a href="#products"><center>Продукция</center></a></li>
+                    <li><a href="#contacts"><center>Контакты</center></a></li>
                     <li><a href="https://www.instagram.com/hlebkamchatka"><center><i class="fa fa-instagram w3-hover-opacity"></i></center></a></li>
                 </ul>
             </div>
         </div>
     </nav>
       
-    <div class="page-header">
-        {% if user.is_authenticated %}
-            <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
-        {% endif %}
-        <h1><a href="/">Django Girls Blog</a></h1>
-    </div>
-    <div class="content container">
-        <div class="row">
-            <div class="col-md-8">
-            {% block content %}
-            {% endblock %}
+    <div class="page-header text-center" id="about">
+        <div class="container">
+            <div class="row justify-content-md-center">
+                <div class="mbr-white col-lg-12 col-md-12">
+                    <h1 class="mbr-section-title align-center mbr-bold pb-3 mbr-fonts-style display-5">Петропавловский Хлебокомбинат</h1>
+                    <p class="mbr-text align-center pb-3 mbr-fonts-style display-5">
+                        We are all very different. We were born in different cities, at different times, we love different music, food, movies. But we have something that unites us all. It is our company. We are its heart. We are not just a team, we are a family.
+                    </p>
+                </div>
             </div>
-        </div>
+        </div>    
     </div>
+    
+    {% block content %}
+    {% endblock %}
 </body>
 
 </html>
