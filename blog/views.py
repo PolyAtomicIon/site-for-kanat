@@ -1,6 +1,10 @@
 from django.shortcuts import render
 from django.utils import timezone
 from .models import Post
+from .models import Product1
+from .models import Product2
+from .models import Product3
+from .models import Product4
 from django.shortcuts import render, get_object_or_404
 from .forms import PostForm
 from django.shortcuts import redirect
@@ -45,5 +49,18 @@ class HomePageView(ListView):
     model = Post
     template_name = 'home.html'
 
-def products(request):
-    return render(request, 'blog/products.html')
+def products1(request):
+    products = Product1.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
+    return render(request, 'blog/products1.html', {'posts': products})
+
+def products2(request):
+    products = Product2.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
+    return render(request, 'blog/products2.html', {'posts': products})
+
+def products3(request):
+    products = Product3.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
+    return render(request, 'blog/products3.html', {'posts': products})
+
+def products4(request):
+    products = Product4.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
+    return render(request, 'blog/products4.html', {'posts': products})

@@ -1,215 +1,17 @@
-
-.page-header {
-    background:white;
-    margin-top: 0;
-    padding: 20px 20px 20px 40px;
-    margin-bottom: 0px;
-}
-
-.page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
-    color: black;
-    font-size: 36pt;
-    text-decoration: none;
-}
-
-.page-header p{
-  font-size: 20px;
-  padding: 40px;
-}
-
-.content {
-    margin-left: 40px;
-}
-
-h1, h2, h3, h4 {
-    font-weight: 700;
-}
-
-.date {
-    color: #828282;
-}
-
-.save {
-    float: right;
-}
-
-.post-form textarea, .post-form input {
-    width: 100%;
-}
-
-.top-menu, .top-menu:hover, .top-menu:visited {
-    color: #ffffff;
-    float: right;
-    font-size: 26pt;
-    margin-right: 20px;
-}
-
-.caroousel-container{
-  width: 100%;
-}
-
-#myCarousel{
-  margin: 0;
-  background-color: indigo;
-  padding: 0;
-}
-
-#myCarousel .carousel-inner{
-  background-color: white;
-  max-width: 2000px;
-  min-width: 300px;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-#myCarousel .carousel-inner .item{
-  padding: 0;
-  margin: 0;
-  max-height: 500px; 
-  background-color: yellowgreen;
-}
-
-#myCarousel .carousel-inner img {
-}
-
-#myCarousel .carousel-caption {
-  left:0;
-  right:0;
-  bottom:0;
-  text-align:left;
-  padding:10px;
-  background:rgba(0,0,0,0.6);
-  text-shadow:none;
-}
-
-#myCarousel .list-group {
-  position:absolute;
-  top:0;
-  right:0;
-}
-#myCarousel .list-group-item {
-  border-radius:0px;
-  cursor:pointer;
-}
-#myCarousel .list-group .active {
-background-color:#eee;	
-}
-
-#myCarousel .carousel-caption{
-  box-shadow: inset 0 0 0 1000px rgba(252, 252, 252, 0.2);
-}
-
-
-#contacts{
-  padding-top: 30px;
-  padding-bottom: 0px;
-  font-size: 18px;
-  background-color: #f6f6f6;
-  margin: 0;
-  left: 50%;
-  font-weight: 500 !important;
-  font-family: Poppins, sans-serif;
-}
-
-#contacts .row{
-  margin: 0;
-  font-size: 22px;
-}
-
-.contact-info{
-  border-style: solid;
-  border-color: black;
-  border-width: 2px;
-  border-radius: 25px;
-  height: 200px;
-  padding: 20x;
-  margin-left: 30px;
-  margin-top: 10px;
-}
-
-.contact-info:first{
-  margin-left: 0px;
-}
-
-@media (min-width: 992px) { 
-#myCarousel {padding-right:33.3333%;}
-#myCarousel .carousel-controls {display:none;} 
-}
-@media (max-width: 1200px) { 
-.carousel-caption p,
-#myCarousel .list-group {display:none;}
- .caroousel-container{
-  width: 100%;
-}
-}
-@media (min-width: 990px) { 
-  #myCarousel .carousel-inner{
-    background-color: white;
-    width: 1200px;
-    margin: 0;
-    padding: 0;
-  }
-}
-@media (min-width: 1200px) { 
-  #myCarousel .carousel-inner{
-    background-color: white;
-    width: 1400px;
-    margin: 0;
-    padding: 0;
-  }
-}
-@media (min-width: 1400px) { 
-  #myCarousel .carousel-inner{
-    background-color: white;
-    width: 1600px;
-    margin: 0;
-    padding: 0;
-  }
-}
-
-.detailed-post{
-}
-
-.detailed-post .text{
-  color: black;
-  background-color: rgba(184, 176, 176, 0.1);
-  font-size: 24px;
-  font-family: italic;
-}
-
-.post h2 a, .post h2 a:visited {
-    color: #000000;
-}   
-
-.post p{
-  font-size: 25px;
-}
-
-.span4 img {
-  margin-right: 10px;
-}
-.span4 .img-left {
-  float: left;
-}
-.span4 .img-right {
-  float: right;
-}
-
 body {
     font: 400 15px Lato, sans-serif;
     line-height: 1.8;
     color: #818181;
     background-color: whitesmoke;
   }
-  h2 {
+  .jumbotron h2 {
     font-size: 24px;
     text-transform: uppercase;
     color: #303030;
     font-weight: 600;
     margin-bottom: 30px;
   }
-  h4 {
+  .jumbotron h4 {
     font-size: 19px;
     line-height: 1.375em;
     color: #303030;
@@ -226,21 +28,22 @@ body {
     color: white;
     padding: 200px 15px;
     font-family: Poppins, sans-serif;
-    font-size: 18px;
+    font-size: 17px;
     margin-bottom: 0;
     position: relative;
   }
   
   .jumbotron h1{
+    font-size: 47px;
     text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
                 0px 8px 13px rgba(0,0,0,0.1),
                 0px 18px 23px rgba(0,0,0,0.1);
   }
 
-  .container-fluid {
+  .jumbotron .container-fluid {
     padding: 60px 50px;
   }
-  .bg-grey {
+  .jumbotron .bg-grey {
     background-color: #f6f6f6;
   }
  
@@ -254,73 +57,57 @@ body {
   .item span {
     font-style: normal;
   }
-  
+
   .navbar{
-    margin-top: 0;
-    padding: 0;
-    margin-bottom: 0;
-    background: #fff ;
-    border: 0;
-    font-size: 16px !important;
-    line-height: 1.42857143 !important;
-    letter-spacing: 4px;
-    border-radius: 0;
-    font-family: Montserrat, sans-serif;
+    margin-bottom:0px;
+    background: #ffffff;
+  }
+  
+  .navbar-nav {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .navbar li a{
+    font-size: 17px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: black;
   }
 
+  .navbar li a:hover{
+    color: #e30016 !important;
+  }
+
+  .navbar .dropdown-menu li a:hover{
+    background: white !important;
+  }
+  .navbar .dropdown-menu li a:hover{
+    color: #e30016 !important;
+  }
+
+  .logo-text li a{
+    font-weight: 700;
+    color: black !important;
+    background: white;
+    font-size: 15px;
+  }
+
+  .logo-text li a:hover{
+    color: black !important;
+    background: white;
+  }
+  
   .navbar i{
-      font-size: 20px;
+    font-size: 20px;
   }
 
-  @media  screen and (min-width: 768px) {
-    .navbar li{
-        border-style: solid;
-        border-width: 0px 0px 0px 1px;
-        border-radius: 50px;
+  @media screen and (min-width: 768px) {   
+    .navbar-nav  li {
+      float: none;
+      display: inline-block;
     }
-}
-
-  .navbar li a, .navbar .navbar-brand {
-    color: #000000 !important;
   }
-  .navbar-nav li a:hover, .navbar-nav li.active a {
-    color: #ad5225  !important;
-    background-color: #fff !important;
-  }
-  .navbar-brand img{
-      height: 70px;
-      margin-top: -20px;
-      margin-left: -10px;
-  }
-  .navbar-header{
-    background-color: #fff;
-    padding: 20;
-  }
-  .navbar-collapse{
-    padding: 20;  
-    border: 0;  
-    background-color: #fff !important; 
-    overflow: hidden;
-  }
-  .navbar-default .navbar-toggle {
-    border-color: transparent;
-    color: #000000 !important;
-  }
-
-  @media (max-width: 991px) {
-    .navbar-collapse.collapse {
-        display: none !important;
-    }
-    .navbar-collapse.collapse.in {
-        display: block !important;
-    }
-    .navbar-header .collapse, .navbar-toggle {
-        display:block !important;
-    }
-    .navbar-header {
-        float:none;
-    }
-}
 
   .slideanim {visibility:hidden;}
   .slide {
@@ -366,32 +153,252 @@ body {
     }
   }
 
+.content {
+  margin-left: 40px;
+}
 
-  #kond{
+h1, h2, h3, h4 {
+  font-weight: 700;
+}
+
+.date {
+  color: #828282;
+}
+
+.save {
+  float: right;
+}
+
+.post-form textarea, .post-form input {
+  width: 100%;
+}
+
+.top-menu, .top-menu:hover, .top-menu:visited {
+  color: #ffffff;
+  float: right;
+  font-size: 26pt;
+  margin-right: 20px;
+}
+
+.caroousel-container{
+width: 100%;
+}
+
+#myCarousel{
+margin: 0;
+background-color: indigo;
+padding: 0;
+}
+
+#myCarousel .carousel-inner{
+background-color: white;
+max-width: 2000px;
+min-width: 300px;
+width: 100%;
+margin: 0;
+padding: 0;
+}
+
+#myCarousel .carousel-inner .item{
+padding: 0;
+margin: 0;
+max-height: 500px; 
+background-color: yellowgreen;
+}
+
+#myCarousel .carousel-inner .item a:hover{
+  color: #e30016 !important;
+  text-decoration: none;
+}
+  
+
+#myCarousel .carousel-inner img {
+}
+
+#myCarousel .carousel-caption {
+left:0;
+right:0;
+bottom:0;
+text-align:left;
+padding: 20px;
+background:rgba(0,0,0,0.6);
+text-shadow:none;
+}
+
+#myCarousel .date {
+  color: white !important;
+}
+
+#myCarousel .list-group {
+position:absolute;
+top:0;
+right:0;
+}
+#myCarousel .list-group-item {
+border-radius:0px;
+cursor:pointer;
+}
+#myCarousel .list-group .active {
+background-color:#eee;	
+}
+
+#myCarousel .carousel-caption{
+box-shadow: inset 0 0 0 1000px rgba(252, 252, 252, 0.2);
+}
+
+@media (min-width: 992px) { 
+#myCarousel {padding-right:33.3333%;}
+#myCarousel .carousel-controls {display:none;} 
+}
+@media (max-width: 1200px) { 
+.carousel-caption p,
+#myCarousel .list-group {display:none;}
+.caroousel-container{
+width: 100%;
+}
+}
+@media (min-width: 990px) { 
+#myCarousel .carousel-inner{
+  background-color: white;
+  width: 1200px;
+  margin: 0;
+  padding: 0;
+}
+}
+@media (min-width: 1200px) { 
+#myCarousel .carousel-inner{
+  background-color: white;
+  width: 1400px;
+  margin: 0;
+  padding: 0;
+}
+}
+@media (min-width: 1400px) { 
+#myCarousel .carousel-inner{
+  background-color: white;
+  width: 1600px;
+  margin: 0;
+  padding: 0;
+}
+}
+
+.detailed-post{
+  background: white;
+}
+
+.detailed-post .text{
+  padding: 30px;
+  color: black;
+  font-size: 20px;
+  font-family: italic;
+}
+
+.detailed-post .text p{
+  padding-top: 20px;
+}
+
+.post h2 a, .post h2 a:visited {
+  color: #000000;
+}   
+
+.post p{
+font-size: 25px;
+}
+
+.span4 img {
+margin-right: 10px;
+}
+.span4 .img-left {
+float: left;
+}
+.span4 .img-right {
+float: right;
+}
+
+/* About us section */
+
+.page-header {
+  margin-top: 0px;
+  background:white;
+  padding: 20px 20px 0px 40px;
+  margin-bottom: 0px;
+}
+
+.page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
+  color: black;
+  font-size: 36pt;
+  text-decoration: none;
+}
+
+.page-header p{
+font-size: 20px;
+padding: 40px;
+}
+
+.feature {
+  margin-bottom: 65px;
+  color: black !important;
+}
+.feature:hover{
+  color: #e30016 !important;
+}
+.feature__icon {
+  font-size: 50px;
+}
+
+.feature .feature__text { 
+  font-weight: 700;
+  font-size: 14px !important;
+  color: #898989;
+}
+
+
+  #contacts{
+    padding-bottom: 0px;
+    background-color: white !important;
+    margin: 0;
+    left: 50%;
+    font-weight: 500 !important;
+    font-family: Poppins, sans-serif;
+  }
+  
+  #contacts .row{
+    margin-bottom: 20px;
+    font-size: 18px;
+  }
+  
+  .contact-info{
+    border-style: solid;
+    border-color: black;
+    border-width: 0px 0px 0px 0px;
+    transition: all 0.7s ease;
+  }
+
+  .contact-info:hover{
+    /*color: #e30016;*/
+    box-shadow: 2px 5px 5px 0px rgba(227,0,22,0.75);
+  }
+  
+  .contact-info:last-child{
+    border-bottom-width: 0px;
+  }
+
+  /* Products, maybe doesnt exits */
+  
+  #products h2{
+    text-transform: uppercase;
+  }
+
+  #products{
     padding: 50px;
     background-color: whitesmoke;
   }
 
-  #kond img{
+  #products img{
     margin-top: 15px;
     height: 150px;
   }
   
-  #kond span{
-    margin-top: -80px !important;
-  }
-
-  #tort{
-    padding: 50px;
-    color: white !important;
-    background-color: rgb(243, 136, 136);
-  }
-
-  #tort img{
-    margin-top: 15px;
-    height: 150px;
-  }
-  
-  #tort span{
+  #products span{
     margin-top: -80px !important;
   }

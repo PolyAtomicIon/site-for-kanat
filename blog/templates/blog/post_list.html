@@ -1,19 +1,91 @@
 {% extends 'blog/base.html' %}
+{% load static %}
 
 {% block content %}
-    
-<div class="page-header text-center" id="about">
-        <div class="container">
-            <div class="row justify-content-md-center">
-                <div class="mbr-white col-lg-12 col-md-12">
-                    <h1 class="mbr-section-title align-center mbr-bold pb-3 mbr-fonts-style display-5">Петропавловский <br> хлебо-булочный комбинат</h1>
-                    <p class="mbr-text align-center pb-3 mbr-fonts-style display-5">
-                        We are all very different. We were born in different cities, at different times, we love different music, food, movies. But we have something that unites us all. It is our company. We are its heart. We are not just a team, we are a family.
-                    </p>
+
+<section id="about" class="page-header text-center">
+        <div class="container about-main-text">
+            <div class="row">
+                <div class="row justify-content-md-center">
+                    <div class="mbr-white col-lg-12 col-md-12">
+                        <h1 class="mbr-section-title align-center mbr-bold pb-3 mbr-fonts-style display-5">Петропавловский <br> хлебо-булочный комбинат</h1>
+                        <p class="mbr-text align-center pb-3 mbr-fonts-style display-5">
+                            В Республике Казахстан на сегодняшний день группа компаний ТОО «ПХБК» <br> является крупнейшим производителем хлебобулочных, кондитерских изделий и продуктов мукомольного производства. В группу компаний входят: <b> ТОО «ДП «Мельница ПХБК», ТОО «ХБК Алматынан», <br> ТОО «Сеть магазинов Нан плюс», ТОО «ДП «ПХК».</b> 
+                        </p>
+                    </div>
                 </div>
             </div>
-        </div>    
-    </div>
+            <div class="row">
+                <div class="col-lg-4">
+                        <div class="feature d-flex">
+                            <i class="glyphicon glyphicon-asterisk feature__icon"></i>
+    
+                            <div class="feature__block">
+                                <h3 class="feature__title">
+                                    Наше производство 
+                                </h3>
+                                <p class="feature__text">
+                                    Ежемесячно ТОО «ПХБК» производит и реализует порядка 600 тонн
+                                    продукции.<br><br> 
+                                    Предприятие обеспечивает продукцией население города
+                                    Петропавловска, области, приграничные регионы России и Казахстана.<br><br>
+                                    Продукция реализуется оптовым покупателям
+                                    города и СКО через «Оптовый магазин», расположенный непосредственно на
+                                    территории ТОО «ПХБК», 
+                                    в розницу - через торговую сеть магазинов «Нан
+                                    плюс» (4 магазина прилавочного типа), 20 торговых отделов ТОО «ПХБК»
+                                    на рынках города, а также согласно полученным заявкам осуществляется
+                                    доставка продукции прочим розничным магазинам.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                <div class="col-lg-4">
+                    <div class="feature d-flex">
+                        <img src="{% static 'img/logo2.png' %}" width="70" class="feature__icon" alt="ПХБК">
+
+                        <div class="feature__block">
+                            <h3 class="feature__title">
+                                Что мы производим?
+                            </h3>
+                            <p class="feature__text">
+                                ТОО «ПХБК» выпускает и реализует широкий ассортиментный ряд
+                                хлебобулочной и кондитерской продукции:<br><br>
+                                1. Хлеб ржано-пшеничный и пшенично-ржаной;<br>
+                                2. Хлеб пшеничный;<br>
+                                3. Булочные изделия (булочки, рогалики, плюшки, лепешки);<br>
+                                4. Кондитерская продукция (торты, пирожные, рулеты);<br>
+                                5. Кондитерские изделия длительного хранения (печенье,
+                                пряники, баранки, сушки, сухари сдобные).<br>
+                                6. Продукты прочие (сухарь, квас);
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="feature d-flex">
+                        <i class="glyphicon glyphicon-certificate feature__icon"></i>
+
+                        <div class="feature__block">
+                            <h3 class="feature__title">
+                                НОВИНКА!
+                            </h3>
+                            <p class="feature__text">
+                                Группа компаний ТОО «ПХБК» активно продвигает на рынок
+                                уникальный продукт - цельнозерновой хлеб Vitalnan. <br><br> В группу
+                                цельнозерновых хлебов Vitalnan входят 4 вида хлеба. Рецептуры хлебов
+                                разработаны технологами группы компаний ТОО «ПХБК». <br><br> В Казахстане
+                                отсутствуют аналоги нашему цельнозерновому хлебу. <br><br> В результате сложной
+                                большой работы сегодня мы можем предложить нашим потребителям
+                                полезный хлеб со сроком годности 20 дней, изготовленный из 100%
+                                натуральных продуктов.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
 <div class="container caroousel-container " id="news">
     <div class="row">
@@ -46,35 +118,6 @@
         </div><!-- End Carousel -->
         </div>
     </div>
-
-                
-    <div id="contacts" class="container-fluid w3-light-grey text-center">
-
-        <h2 class="text-center w3-padding-32">К О Н Т А К Т Ы</h2>
-        <div class="row">
-            
-            <div class="col-sm-12 col-xs-12 col-md-4 col-lg-12">
-                <p> <b> Начальник отдела сбыта </b> <br> Махметов Е. У. 8 (707) 798 80 00 </p>
-                <p> <b> Руководитель хлебо-булочного направления </b> <br> Кучумова А. 8 (747) 039 06 83 </p>
-                <p> <b> Руководитель кондитерского направления </b> <br> Сейтова А. А. 8 (777) 897 16 20 </p>
-                <p> <b> Приёмная ТОО ПХБК </b> <br>Адрес: Северо-Казахстанская область, г. Петропавловск
-                        Телефон: 465080
-                        Fax: 465080 </p>
-            </div>
-                        
-        
-        </div>
-        
-        
-        <footer class="w3-container w3-light-grey w3-center w3-xlarge">
-        <div class="w3-section">
-            <a style="display: inline-block; padding-right: 3px" target="_blank" href="https://www.instagram.com/hlebkamchatka/"><i class="fa fa-instagram w3-hover-opacity"></i></a>
-        </div>
-        <p class="w3-medium">@2017 Powered by <a href="https://www.instagram.com/2powerofn/" target="_blank" class="w3-hover-text-green"> 2powerofn </a></p>
-        </footer>
-            
-            
-    </div>
     
 
 <script>
@@ -82,7 +125,7 @@
 
             var clickEvent = false;
             $('#myCarousel').carousel({
-                interval:   1750
+                interval:   2500
             }).on('click', '.list-group li', function() {
                     clickEvent = true;
                     $('.list-group li').removeClass('active');
