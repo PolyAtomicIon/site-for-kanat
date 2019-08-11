@@ -378,6 +378,12 @@ padding: 40px;
     border-width: 0px 0px 0px 0px;
     transition: all 0.7s ease;
   }
+  
+  @media (min-width: 1000px) { 
+    .contact-info .container{
+      width: 40% !important;
+    }
+  }
 
   .contact-info:hover{
     color: #e30016;
