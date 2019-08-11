@@ -348,10 +348,9 @@ padding: 40px;
 
 .feature .feature__text { 
   font-weight: 700;
-  font-size: 14px !important;
+  font-size: 16px !important;
   color: #898989;
 }
-
 
   #contacts{
     padding-bottom: 0px;
@@ -375,7 +374,7 @@ padding: 40px;
   }
 
   .contact-info:hover{
-    /*color: #e30016;*/
+    color: #e30016;
     box-shadow: 2px 5px 5px 0px rgba(227,0,22,0.75);
   }
   
