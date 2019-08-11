@@ -330,6 +330,12 @@ float: right;
   text-decoration: none;
 }
 
+@media (max-width: 768px) { 
+  .page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
+    font-size: 26pt;
+  }
+}
+
 .page-header p{
 font-size: 20px;
 padding: 40px;
