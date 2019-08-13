@@ -50,17 +50,17 @@ class HomePageView(ListView):
     template_name = 'home.html'
 
 def products1(request):
-    products = Product1.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
+    products = Product1.objects.all()
     return render(request, 'blog/products1.html', {'posts': products})
 
 def products2(request):
-    products = Product2.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
+    products = Product2.objects.all()
     return render(request, 'blog/products2.html', {'posts': products})
 
 def products3(request):
-    products = Product3.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
+    products = Product3.objects.all()
     return render(request, 'blog/products3.html', {'posts': products})
 
 def products4(request):
-    products = Product4.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
+    products = Product4.objects.all()
     return render(request, 'blog/products4.html', {'posts': products})
