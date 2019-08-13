@@ -426,10 +426,6 @@ padding: 40px;
   }
 
   /* Products, maybe doesnt exits */
-  
-  #products h2{
-    text-transform: uppercase;
-  }
 
   #products{
     padding: 50px;
@@ -443,4 +439,18 @@ padding: 40px;
   
   #products span{
     margin-top: -80px !important;
+  }
+
+  #products .infoblocks{
+    height: 250px;
+  }
+
+  #products .infoblocks-tort  {
+    height: 325px;
+  }
+
+  @media (min-width: 700px) { 
+    #products .infoblocks-tort{
+      height: 400px;
+    }
   }
