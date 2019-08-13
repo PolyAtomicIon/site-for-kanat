@@ -1,6 +1,7 @@
 from django.conf import settings
 from django.db import models
 from django.utils import timezone
+from django.core.validators import FileExtensionValidator
 
 
 class Post(models.Model):
@@ -21,7 +22,7 @@ class Post(models.Model):
 class Product1(models.Model):
     title = models.CharField(max_length=200)
     text = models.TextField()
-    cover = models.ImageField(upload_to='images/', null=True, blank=True)
+    cover = models.ImageField(upload_to='images/',  validators=[FileExtensionValidator(['jpg', 'png'])], null=True, blank=True)
     #published_date = models.DateTimeField(blank=True, null=True)
 
     def publish(self):
@@ -33,7 +34,7 @@ class Product1(models.Model):
 class Product2(models.Model):
     title = models.CharField(max_length=200)
     text = models.TextField()
-    cover = models.ImageField(upload_to='images/', null=True, blank=True)
+    cover = models.ImageField(upload_to='images/',  validators=[FileExtensionValidator(['jpg', 'png'])], null=True, blank=True)
     #published_date = models.DateTimeField(blank=True, null=True)
 
     def publish(self):
@@ -45,7 +46,7 @@ class Product2(models.Model):
 class Product3(models.Model):
     title = models.CharField(max_length=200)
     text = models.TextField()
-    cover = models.ImageField(upload_to='images/', null=True, blank=True)
+    cover = models.ImageField(upload_to='images/',  validators=[FileExtensionValidator(['jpg', 'png'])], null=True, blank=True)
     #published_date = models.DateTimeField(blank=True, null=True)
 
     def publish(self):
@@ -57,7 +58,7 @@ class Product3(models.Model):
 class Product4(models.Model):
     title = models.CharField(max_length=200)
     text = models.TextField()
-    cover = models.ImageField(upload_to='images/', null=True, blank=True)
+    cover = models.ImageField(upload_to='images/',  validators=[FileExtensionValidator(['jpg', 'png'])], null=True, blank=True)
     #published_date = models.DateTimeField(blank=True, null=True)
 
     def publish(self):
