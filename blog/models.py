@@ -58,7 +58,7 @@ class Product3(models.Model):
 class Product4(models.Model):
     title = models.CharField(max_length=200)
     text = models.TextField()
-    cover = models.ImageField(upload_to='images/',  validators=[FileExtensionValidator(['jpg', 'png'])], null=True, blank=True)
+    cover = models.ImageField(upload_to='images/',  validators=[FileExtensionValidator(['jpg', 'png', 'tif'])], null=True, blank=True)
     #published_date = models.DateTimeField(blank=True, null=True)
 
     def publish(self):
