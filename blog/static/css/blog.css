@@ -412,7 +412,7 @@ padding: 40px;
   
   @media (min-width: 1000px) { 
     .contact-info .container{
-      width: 45% !important;
+      width: 50% !important;
     }
   }
 
